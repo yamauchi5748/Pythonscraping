@@ -1,0 +1,272 @@
+targets:
+  -
+    status: false  # trueならスクレイピング対象
+    name: akabeesoft3
+    url: 'http://www.akabeesoft3.com/products.html'
+    root: 'http://www.akabeesoft3.com'
+    save:
+      type: mongo
+      ip: "mongo"
+      port: 27017
+      db_name: 'DB_NAME'
+      db_table: 'DB_TABLE'
+    params:
+      - brand: 'あかべぇそふと3'
+      - categories: [ '美少女ゲーム', 'あかべぇそふと3' ]
+    contents:
+      - 
+        #タイトル
+        elem: 'title'
+        type: 'text'
+        selector: '.prod_box > h3'
+      - 
+        #画像URL
+        elem: 'image_path'
+        type: 'src'
+        selector: '.pk_img > a > img'
+      - 
+        #公式リンク
+        elem: 'link'
+        type: 'href'
+        selector: '.prod_data > ul > li:nth-child(1) > a'
+  -
+    status: false  # trueならスクレイピング対象
+    name: yuzusoft
+    url: 'http://www.yuzu-soft.com/products.html'
+    root: 'http://www.yuzu-soft.com'
+    save:
+      type: mongo
+      ip: "mongo"
+      port: 27017
+      db_name: 'DB_NAME'
+      db_table: 'DB_TABLE'
+    params:
+      - brand: 'ゆずソフト'
+      - categories: [ '美少女ゲーム', 'ゆずソフト' ]
+    contents:
+      -
+        #タイトル
+        elem: 'title'
+        type: 'text'
+        selector: '.item-frame .name'
+      - 
+        #画像URL
+        elem: 'image_path'
+        type: 'src'
+        selector: '.item-frame img'
+      - 
+        #公式リンク
+        elem: 'link'
+        type: 'href'
+        selector: '.item-frame > div > a:nth-child(1)'
+
+  -
+    status: true  # trueならスクレイピング対象
+    name: alicesoft
+    url: 'https://www.alicesoft.com/game/normal/'
+    root: 'https://www.alicesoft.com'
+    save:
+      type: mongo
+      ip: "mongo"
+      port: 27017
+      db_name: 'DB_NAME'
+      db_table: 'DB_TABLE'
+    params:
+      - brand: 'アリスソフト'
+      - categories: [ '美少女ゲーム', 'アリスソフト' ]
+    contents:
+      -
+        #タイトル
+        elem: 'title'
+        type: 'text'
+        selector: '.soft-list .title'
+      - 
+        #画像URL
+        elem: 'image_path'
+        type: 'src'
+        selector: '.soft-list img'
+      - 
+        #公式リンク
+        elem: 'link'
+        type: 'href'
+        selector: '.soft-list a'
+  -
+    status: true  # trueならスクレイピング対象
+    name: akabee2
+    url: 'http://www.akabeesoft2.com/product.html'
+    root: 'http://www.akabeesoft2.com'
+    save:
+      type: mongo
+      ip: "mongo"
+      port: 27017
+      db_name: 'DB_NAME'
+      db_table: 'DB_TABLE'
+    params:
+      - brand: 'あかべぇそふと2'
+      - categories: [ '美少女ゲーム', 'あかべぇそふと2' ]
+    contents:
+      -
+        #タイトル
+        elem: 'title'
+        type: 'text'
+        selector: '.prod_box h3'
+      - 
+        #画像URL
+        elem: 'image_path'
+        type: 'src'
+        selector: '.prod_box .pk_img img'
+      - 
+        #公式リンク
+        elem: 'link'
+        type: 'href'
+        selector: '.prod_box li:nth-child(1) a'
+  -
+    status: true  # trueならスクレイピング対象
+    name: akatsukiworks
+    url: 'http://www.akatsukiworks.com/products.html'
+    root: 'http://www.akatsukiworks.com'
+    save:
+      type: mongo
+      ip: "mongo"
+      port: 27017
+      db_name: 'DB_NAME'
+      db_table: 'DB_TABLE'
+    params:
+      - brand: '暁WORKS'
+      - categories: [ '美少女ゲーム', '暁WORKS' ]
+    contents:
+      -
+        #タイトル
+        elem: 'title'
+        type: 'text'
+        selector: '.prod_box h3'
+      - 
+        #画像URL
+        elem: 'image_path'
+        type: 'src'
+        selector: '.prod_img img'
+      - 
+        #公式リンク
+        elem: 'link'
+        type: 'href'
+        selector: '.prod_box li:nth-child(1) a'
+  -
+    status: true  # trueならスクレイピング対象
+    name: applique-soft
+    url: 'http://www.applique-soft.com/seihin.html'
+    root: 'http://www.applique-soft.com'
+    save:
+      type: mongo
+      ip: "mongo"
+      port: 27017
+      db_name: 'DB_NAME'
+      db_table: 'DB_TABLE'
+    params:
+      - brand: 'あっぷりけ'
+      - categories: [ '美少女ゲーム', 'あっぷりけ' ]
+    contents:
+      -
+        #タイトル
+        elem: 'title'
+        type: 'text'
+        selector: '.seihin_box h1'
+      - 
+        #画像URL
+        elem: 'image_path'
+        type: 'src'
+        selector: '.seihin_box .seihin_img img'
+      - 
+        #公式リンク
+        elem: 'link'
+        type: 'href'
+        selector: '.seihin_box .seihin_img a'
+  -
+    status: true  # trueならスクレイピング対象
+    name: cosmiccute
+    url: 'http://www.cosmiccute.com/products.html'
+    root: 'http://www.cosmiccute.com'
+    save:
+      type: mongo
+      ip: "mongo"
+      port: 27017
+      db_name: 'DB_NAME'
+      db_table: 'DB_TABLE'
+    params:
+      - brand: 'COSMIC CUTE'
+      - categories: [ '美少女ゲーム', 'COSMIC CUTE' ]
+    contents:
+      -
+        #タイトル
+        elem: 'title'
+        type: 'text'
+        selector: '.products_contents h3'
+      - 
+        #画像URL
+        elem: 'image_path'
+        type: 'src'
+        selector: '.products_contents .products_contents_img img'
+      - 
+        #公式リンク
+        elem: 'link'
+        type: 'href'
+        selector: '.products_contents .products_contents_img a'
+  -
+    status: true  # trueならスクレイピング対象
+    name: hibiki-site
+    url: 'http://www.hibiki-site.com/product.html'
+    root: 'http://www.hibiki-site.com'
+    save:
+      type: mongo
+      ip: "mongo"
+      port: 27017
+      db_name: 'DB_NAME'
+      db_table: 'DB_TABLE'
+    params:
+      - brand: 'hibiki works'
+      - categories: [ '美少女ゲーム', 'hibiki works' ]
+    contents:
+      -
+        #タイトル
+        elem: 'title'
+        type: 'text'
+        selector: '.prod_box h2'
+      - 
+        #画像URL
+        elem: 'image_path'
+        type: 'src'
+        selector: '.prod_box .pkg img'
+      - 
+        #公式リンク
+        elem: 'link'
+        type: 'href'
+        selector: '.prod_box .pkg a'
+  -
+    status: true  # trueならスクレイピング対象
+    name: sprite
+    url: 'https://sprite.org/products/'
+    root: 'https://sprite.org'
+    save:
+      type: mongo
+      ip: "mongo"
+      port: 27017
+      db_name: 'DB_NAME'
+      db_table: 'DB_TABLE'
+    params:
+      - brand: 'sprite / S-WORKS'
+      - categories: [ '美少女ゲーム', 'sprite / S-WORKS' ]
+    contents:
+      -
+        #タイトル
+        elem: 'title'
+        type: 'text'
+        selector: '.entrylist .fadeover li .text'
+      - 
+        #画像URL
+        elem: 'image_path'
+        type: 'src'
+        selector: '.entrylist .fadeover li .image img'
+      - 
+        #公式リンク
+        elem: 'link'
+        type: 'href'
+        selector: '.entrylist .fadeover li a'
